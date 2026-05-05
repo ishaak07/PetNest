@@ -1,0 +1,94 @@
+<% layout('layouts/boilerplate') -%>
+
+<div class="container py-4" style="max-width: 1300px;">
+
+    <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 25px;">
+        📊 My Dashboard
+    </h2>
+
+    <!-- MAIN ROW -->
+    <div style="display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start;">
+
+        <!-- LEFT BOXES -->
+        <div style="flex: 1 1 320px; min-width: 280px; display:flex; flex-direction:column; gap:15px;">
+
+            <!-- TOTAL -->
+            <div class="card border-0 shadow rounded-2 p-4">
+                <h6 style="font-size:16px; font-weight:600; margin:0; white-space:nowrap;">
+                    Total Appointments
+                </h6>
+
+                <h2 style="font-size:42px; font-weight:800; color:#0d6efd; margin-top:10px;">
+                    <%= total %>
+                </h2>
+            </div>
+
+            <!-- UPCOMING -->
+            <div class="card border-0 shadow rounded-4 p-4">
+                <h6 style="font-size:16px; font-weight:600; margin:0; white-space:nowrap;">
+                    Upcoming Appointments
+                </h6>
+
+                <h2 style="font-size:42px; font-weight:800; color:#198754; margin-top:10px;">
+                    <%= upcoming %>
+                </h2>
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div style="flex: 2 1 500px; min-width: 320px;">
+
+            <h5 style="font-weight:700; margin-bottom:15px;">
+                📅 Recent Appointments
+            </h5>
+
+            <% if (appointments.length === 0) { %>
+
+                <div class="alert alert-info p-3">
+                    No appointments yet.
+                </div>
+
+            <% } else { %>
+
+                <div style="display:flex; flex-direction:column; gap:12px;">
+
+                    <% appointments.slice(0,4).forEach(a => { %>
+
+                        <div class="card border-0 shadow rounded-4 p-3"
+                            style="display:flex; justify-content:space-between; align-items:center;">
+
+                            <div style="min-width:0;">
+                                <h6 style="margin:0; font-size:17px; font-weight:700; white-space:nowrap;">
+                                    ✂️ <%= a.service %>
+                                </h6>
+
+                                <small style="color:gray;">
+                                    <%= a.name %>
+                                </small>
+                            </div>
+
+                            <div style="font-size:14px; color:#555; white-space:nowrap;">
+                                📅 <%= new Date(a.date).toDateString() %>
+                            </div>
+
+                        </div>
+
+                    <% }) %>
+
+                </div>
+
+            <% } %>
+
+            <div style="text-align:center; margin-top:20px;">
+                <a href="/appointments"
+                    class="btn btn-primary px-4 py-2"
+                    style="border-radius:10px;">
+                    View All Appointments
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</div>

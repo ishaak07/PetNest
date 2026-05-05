@@ -1,0 +1,97 @@
+<% layout('layouts/boilerplate') %>
+
+<div style="max-width:900px; margin:40px auto;">
+
+    <h2 style="text-align:center; font-weight:700; margin-bottom:25px;">
+        🐾 Trusted Services
+    </h2>
+
+    <p style="text-align:center; color:#555; margin-bottom:30px;">
+        See what our happy pet owners say about us.
+    </p>
+
+    <!-- REVIEWS -->
+    <div style="display:flex; flex-direction:column; gap:15px;">
+
+        <!-- DEFAULT REVIEWS -->
+        <div class="card p-3 shadow-sm">
+            <b>Riya</b>
+            <div>⭐⭐⭐⭐⭐</div>
+            <p>Amazing grooming service! My dog looks so clean and happy.</p>
+        </div>
+
+        <div class="card p-3 shadow-sm">
+            <b>Aman</b>
+            <div>⭐⭐⭐⭐</div>
+            <p>Very reliable vet service. Booking was smooth and quick.</p>
+        </div>
+
+        <div class="card p-3 shadow-sm">
+            <b>Neha</b>
+            <div>⭐⭐⭐⭐⭐</div>
+            <p>Loved the pet sitting service. My pet felt at home!</p>
+        </div>
+
+        <div class="card p-3 shadow-sm">
+            <b>Rahul</b>
+            <div>⭐⭐⭐⭐</div>
+            <p>Training sessions really improved my dog’s behavior.</p>
+        </div>
+
+        <!-- USER REVIEWS -->
+        <% if(reviews && reviews.length > 0){ %>
+            <% reviews.forEach(r => { %>
+                <div class="card p-3 shadow-sm">
+                    <b><%= r.name %></b>
+                    <div>
+                        <% for(let i=0;i<r.rating;i++){ %>⭐<% } %>
+                    </div>
+                    <p><%= r.message %></p>
+                </div>
+            <% }) %>
+        <% } %>
+
+    </div>
+
+    <div style="text-align:center; margin-top:30px;">
+        <a href="/#services" class="btn btn-primary">
+            Explore Services
+        </a>
+    </div>
+
+</div>
+
+<!-- ADD REVIEW -->
+<div style="margin-top:40px;">
+
+    <h4 style="text-align:center; margin-bottom:15px;">
+        Add Your Review
+    </h4>
+
+    <form action="/reviews" method="POST"
+        style="max-width:500px; margin:auto; display:flex; flex-direction:column; gap:10px;">
+
+        <input type="text" name="name" placeholder="Your Name" required
+            style="padding:10px; border-radius:8px; border:1px solid #ccc;">
+
+        <!-- STAR RATING -->
+        <select name="rating" required
+            style="padding:10px; border-radius:8px; border:1px solid #ccc;">
+            <option value="">Select Rating</option>
+            <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+            <option value="4">⭐⭐⭐⭐ (4)</option>
+            <option value="3">⭐⭐⭐ (3)</option>
+            <option value="2">⭐⭐ (2)</option>
+            <option value="1">⭐ (1)</option>
+        </select>
+
+        <textarea name="message" placeholder="Write your review..." required
+            style="padding:10px; border-radius:8px; border:1px solid #ccc;"></textarea>
+
+        <button class="btn btn-success mt-2 mb-3">
+            Submit Review
+        </button>
+
+    </form>
+
+</div>

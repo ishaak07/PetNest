@@ -1,0 +1,18 @@
+<% layout('layouts/boilerplate') %>
+<h1>Add Pet Service</h1>
+
+    <form action="/pets" method="POST">
+
+        <input type="text" name="pet[name]" placeholder="Pet Name" required>
+
+        <input type="text" name="pet[type]" placeholder="Type (Dog/Cat)" required>
+
+        <input type="text" name="pet[service]" placeholder="Service (Vet/Grooming)" required>
+
+        <input type="number" name="pet[price]" placeholder="Price" required>
+
+        <input type="text" name="pet[location]" placeholder="Location" required>
+
+        <button type="submit">Add</button>
+
+    </form>

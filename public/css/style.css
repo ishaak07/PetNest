@@ -1,0 +1,543 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffe4e1, #fff6e5); /* blush + cream */
+    margin: 0;
+    
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 40px;
+    background: #2b2b2b;
+    color: white;
+}
+.navbar {
+    position: sticky !important;
+    top: 0;
+    z-index: 1000;
+    background: #2b2b2b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* LEFT (logo small) */
+.nav-left {
+    font-size: 18px;   /* smaller */
+    font-weight: 600;
+    
+}
+.add-btn {
+    background: #ff7a59 !important;
+    color: white !important;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    border: none;
+}
+
+.add-btn:hover {
+    background: #ff5a3c !important;
+}
+
+/* CENTER (search smaller + shifted right) */
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.nav-center input {
+    width: 180px;   /* smaller */
+    padding: 6px 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+/* RIGHT (buttons) */
+.nav-right {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-right a {
+    text-decoration: none;
+    background: #ff7a59;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-right a:hover {
+    background: #ff5a3c;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 40px 20px 10px;
+}
+
+.header h1 {
+    font-size: 40px;
+    margin: 0;
+    color: #5c3a2e;
+}
+
+.header p {
+    color: #7a5c50;
+    margin-top: 8px;
+}
+
+/* BUTTON */
+.main-btn {
+    background: #ffd6c9;
+    color: #5c3a2e;
+    padding: 10px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background: #ffbfae;
+}
+
+/* CARD CONTAINER */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+    padding: 30px 60px;
+}
+
+.card {
+    border-radius: 18px;
+    overflow: hidden;
+    background: white;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 10px 5px;
+}
+
+.card h2 {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.price {
+    font-weight: 500;
+    color: #444;
+}
+
+/* FORM */
+form {
+    width: 300px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column; /* makes everything vertical */
+    gap: 15px; /* spacing between inputs */
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background: #fffaf7;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 10px;
+}
+button:hover {
+    background: #ff7f66;
+}
+
+.footer {
+    background: #2b2b2b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer .icons {
+    margin-bottom: 10px;
+}
+
+.footer .icons i {
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.footer a {
+    color: #ffb3a7;
+    margin: 0 8px;
+    text-decoration: none;
+    font-size: 14px;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto;
+}
+
+/* LOGO */
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 22px;
+    color: #ff8a65;
+}
+
+.logo i {
+    margin-right: 5px;
+}
+
+/* LEFT SECTION ALIGN */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ADD SERVICE BUTTON */
+.add-btn {
+    background: #ff7a59;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* SEARCH ICON */
+.nav-center {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-icon {
+    color: white;
+    cursor: pointer;
+}
+
+.alert {
+    width: 300px;
+    margin: 10px auto;
+    padding: 8px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+.success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.form-box {
+    width: 300px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+button, .btn {
+    padding: 6px 14px !important;
+    font-size: 13px !important;
+    border-radius: 18px !important;
+}
+.card-box a.btn {
+    width: auto !important;
+    display: inline-flex !important;
+}
+
+/* specifically forms */
+form button {
+    width: auto;
+    min-width: 120px;
+}
+
+.flash {
+    width: fit-content;
+    margin: 10px auto;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.success-msg {
+    background: #d4edda;
+    color: #155724;
+}
+
+.error-msg {
+    background: #f8d7da;
+    color: #721c24;
+}
+.home-hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.home-hero h1 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #ff6f61; /* coral */
+    margin-bottom: 12px;
+}
+
+.home-hero p {
+    font-size: 18px;
+    color: #444;
+}
+.home-hero a,
+.cta a {
+    padding: 10px 22px !important;
+    font-size: 15px !important;
+    border-radius: 25px;
+}
+.services {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.services h2 {
+    margin-bottom: 20px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 150px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.why {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.why-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.why-cards div {
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.cta {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cta h2 {
+    margin-bottom: 15px;
+}
+/* spacing between sections */
+.home-hero,
+.services,
+.why,
+.cta {
+    margin-bottom: 20px;
+}
+
+/* overall max width for better look */
+.home-hero,
+.services,
+.why,
+.cta {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.service-card {
+    width: 180px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.service-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.service-card p {
+    padding: 10px;
+    font-weight: 500;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+.service-card {
+    text-decoration: none;
+    color: inherit;
+}
+.service-container{
+    margin-top: 30px;
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-title{
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.card-box{
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.card-box:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.price{
+    color: #28a745;
+    font-weight: 600;
+}
+
+.card-box ul{
+    padding-left: 18px;
+}
+.service-container h3{
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.service-container p{
+    color: #444;
+    line-height: 1.6;
+}
+
+.service-container ul li{
+    margin-bottom: 6px;
+}
+
+hr{
+    margin: 15px 0;
+    opacity: 0.2;
+}
+.small-btn{
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    width: auto !important;
+    height: auto !important;
+
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1;
+
+    border-radius: 6px;
+    flex: 0 0 auto;
+}
+
+.appointment-card {
+    border-radius: 14px;
+    border: none;
+    transition: 0.3s;
+    background: #fff;
+}
+
+.appointment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+.appointment-card {
+    min-width: 250px;
+    border-radius: 12px;
+}
+
+.card-body {
+    word-break: break-word;
+}
+
+.appointment-card {
+    transition: 0.2s ease;
+    border-radius: 16px;
+}
+
+.appointment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+/* FORCE SEARCH ICON VISIBLE */
+.search-icon {
+    color: white !important;
+    font-size: 16px;
+    display: inline-block;
+}
+
+/* BUTTON ALIGN FIX */
+.nav-center button {
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

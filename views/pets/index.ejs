@@ -1,0 +1,19 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="header">
+    <h1>Manage Your Pet Services Easily</h1>
+    <p>Book grooming, vet visits, training & more</p>
+</div>
+
+<div class="container">
+    <% allPets.forEach(pet => { %>
+        <div class="card">
+    <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b" />
+
+    <div class="card-body">
+        <h2><%= pet.name %></h2>
+        <p class="price">₹ <%= pet.price %></p>
+    </div>
+</div>
+    <% }) %>
+</div>

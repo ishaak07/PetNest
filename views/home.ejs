@@ -1,0 +1,66 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="home-hero">
+    <h1>Care for your pets, made simple</h1>
+    <p>Book grooming, vet visits, training & more</p>
+
+    <!-- FIXED: changed href for smooth scroll -->
+    <a href="#services" class="btn btn-success btn-sm">Explore Services</a>
+</div>
+
+<div class="services" id="services">
+    <h2>Our Services</h2>
+
+    <div class="service-cards">
+
+        <a href="/services/vet" class="service-card">
+            <img src="/images/vetcare.jpg">
+            <p>Vet Care</p>
+        </a>
+
+        <a href="/services/grooming" class="service-card">
+            <img src="/images/groom.jpg">
+            <p>Grooming</p>
+        </a>
+
+        <a href="/services/training" class="service-card">
+            <img src="/images/train.jpg">
+            <p>Training</p>
+        </a>
+
+        <a href="/services/sitting" class="service-card">
+            <img src="/images/pet sitting.jpg">
+            <p>Pet Sitting</p>
+        </a>
+
+    </div>
+</div>
+
+<div class="why">
+    <h2>Why Choose Us</h2>
+
+    <div class="why-cards">
+
+        <a href="/how-it-works" style="text-decoration:none; color:inherit;">
+            <div>⚡ Easy Booking</div>
+        </a>
+
+        <a href="/reviews" style="text-decoration:none; color:inherit;">
+            <div>🐾 Trusted Services</div>
+        </a>
+
+        <a href="/dashboard" style="text-decoration:none; color:inherit;">
+            <div>📅 Track Appointments</div>
+        </a>
+    </div>
+</div>
+
+<div class="cta">
+    <h2>Start managing your pet today</h2>
+
+    <% if(currUser){ %>
+        <a href="/pets/new" class="btn add-btn">Add Service</a>
+    <% } else { %>
+        <a href="/signup" class="btn btn-success btn-sm">Get Started</a>
+    <% } %>
+</div>
